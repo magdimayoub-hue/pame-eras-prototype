@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Contact · PAME ERAS Society</title>
+<meta name="description" content="Contact PAME ERAS: general enquiries, implementation support, speakers and partnerships. Partners, sponsorship and privacy policies.">
+<link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+.form-wrap{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:clamp(22px,4vw,44px);box-shadow:var(--shadow)}
+.contact-list{display:grid;gap:12px}
+.ci{display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.ci .ic{width:48px;height:48px;border-radius:12px;background:var(--teal-soft);color:var(--teal);display:grid;place-items:center}
+.ci .ic svg{width:22px;height:22px}
+.ci b{display:block;color:var(--navy)}
+.ci span{font-size:14px;color:var(--muted)}
+.partners{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:14px}
+.partner{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;display:grid;gap:6px;min-height:150px;align-content:center;text-align:center;justify-items:center}
+.partner .logo{width:100%;height:56px;border-radius:10px;display:grid;place-items:center;font:500 11px var(--f-mono);color:var(--muted);background:var(--sand);margin-bottom:8px}
+.partner b{color:var(--navy)}
+.partner span{font-size:13px;color:var(--muted)}
+.policy{display:grid;gap:12px}
+.policy details{background:var(--surface);border:1px solid var(--line);border-radius:14px}
+.policy summary{cursor:pointer;list-style:none;padding:18px 22px;font:700 18px var(--f-display);color:var(--navy);display:flex;justify-content:space-between}
+.policy summary::-webkit-details-marker{display:none}
+.policy summary::after{content:"+";font:400 24px/1 var(--f-body);color:var(--teal);transition:transform .3s var(--ease)}
+.policy details[open] summary::after{transform:rotate(45deg)}
+.policy .a{padding:0 22px 20px;color:var(--muted)}
+.policy .a ul{margin:8px 0 0;padding-left:18px;display:grid;gap:6px}
+</style>
+</head>
+<body data-page="contact">
+<main id="main">
+
+<section class="page-hero on-dark" data-trace>
+  <div class="wrap">
+    <span class="crumbs load-in"><a href="index.html">Home</a> / Contact</span>
+    <h1 class="h-xl load-in" style="--d:.08s">Get in touch.</h1>
+    <p class="lede load-in" style="--d:.16s">Questions about ERAS®, implementation support, speaker invitations or partnerships. One form, routed to the right person.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap split" style="align-items:start">
+    <div class="form-wrap reveal">
+      <form class="form" data-validate>
+        <div class="row2">
+          <div class="field"><label for="c-name">Name</label><input id="c-name" autocomplete="name" required><span class="err">Please enter your name.</span></div>
+          <div class="field"><label for="c-email">Email</label><input id="c-email" type="email" autocomplete="email" required><span class="err">Please enter a valid email.</span></div>
+        </div>
+        <div class="field"><label for="c-topic">Topic</label><select id="c-topic" required><option value="">Choose a topic</option><option value="general">General question</option><option value="implement">ERAS® implementation support</option><option value="speaker">Speaker or lecture invitation</option><option value="events">Events and congresses</option><option value="partner">Partnership or sponsorship</option><option value="media">Media</option></select><span class="err">Please choose a topic.</span></div>
+        <div class="field"><label for="c-org">Hospital or organisation <small>(optional)</small></label><input id="c-org" autocomplete="organization"></div>
+        <div class="field"><label for="c-msg">Message</label><textarea id="c-msg" required></textarea><span class="err">Please write a short message.</span></div>
+        <label class="check"><input type="checkbox" required><span>I agree that PAME ERAS may store these details to reply to me, as described in the <a href="#privacy">privacy policy</a>.</span></label>
+        <div><button class="btn btn-pri" type="submit">Send message</button></div>
+      </form>
+      <div class="form-done" tabindex="-1"><svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="26" cy="26" r="24" stroke-width="2" opacity=".25"/><path d="M15 27l7 7 15-16"/></svg><h3 style="font-size:24px">Message sent</h3><p style="color:var(--muted);margin-top:8px">Thank you. On the live site this reaches the Society's inbox and you'd get a confirmation email. (The old site's form was broken.)</p></div>
+    </div>
+    <div class="reveal" style="--d:.1s">
+      <div class="sec-head"><span class="kicker">Contact details</span><h2 class="h-md">Other ways to reach us</h2></div>
+      <div class="contact-list">
+        <div class="ci"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><div><b>Email</b><span>info@pame-eras.com · address to confirm</span></div></div>
+        <div class="ci"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><b>Registered address</b><span>07 El Idrissi Street, Heliopolis, Cairo, Egypt · from the old site, to confirm</span></div></div>
+        <div class="ci"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></span><div><b>Social media</b><span>YouTube · LinkedIn · X · accounts to confirm</span></div></div>
+      </div>
+      <p class="note" style="margin-top:16px">The old site showed a vendor's email and placeholder phone numbers. Only verified details will go live.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-sand" id="partners">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Partners</span><h2 class="h-lg">Working together.</h2><p class="lede">Organisations we have co-organised events with. Sponsors appear here and on event pages, never alongside scientific content.</p></div>
+    <div class="partners stagger">
+      <div class="partner"><span class="logo">LOGO (with permission)</span><b>Ministry of Health, Oman</b><span>3rd Middle East ERAS Conference, 2019</span></div>
+      <div class="partner"><span class="logo">LOGO (with permission)</span><b>KEPAN</b><span>IASCN 2025, Dubai</span></div>
+      <div class="partner"><span class="logo">LOGO (with permission)</span><b>Partner name</b><span>Role · year</span></div>
+      <div class="partner"><span class="logo">LOGO (with permission)</span><b>Partner name</b><span>Role · year</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap" style="max-width:900px">
+    <div class="sec-head reveal"><span class="kicker">Policies</span><h2 class="h-lg">How we work.</h2></div>
+    <div class="policy stagger">
+      <details id="sponsorship"><summary>Sponsorship policy</summary><div class="a">Draft summary, to be approved by the board:<ul><li>Sponsors support events and education; they do not choose speakers, topics or content.</li><li>Sponsored sessions are clearly labelled. Guideline and clinical pages carry no sponsorship.</li><li>Speakers and board members declare conflicts of interest, published yearly.</li><li>Sponsorship income and use are reported in the annual report.</li></ul></div></details>
+      <details id="privacy"><summary>Privacy policy</summary><div class="a">Draft summary, to be reviewed for the laws where our members live (including EU GDPR and data-protection laws in the UAE, Egypt and Saudi Arabia):<ul><li>We collect only what a form asks for, to answer you or send what you requested.</li><li>We never sell or share your data for marketing.</li><li>Visitor statistics are anonymous and use no tracking cookies.</li><li>You can ask to see, correct or delete your data at any time.</li></ul></div></details>
+      <details><summary>Medical disclaimer</summary><div class="a">Clinical content on this site is for healthcare professionals. It summarises published evidence and guidelines and is not individual medical advice. Patients should speak to their own care team.</div></details>
+      <details><summary>Trademark notice</summary><div class="a">ERAS® is a registered trademark of the ERAS® Society. PAME ERAS is an independent society and is not affiliated with or endorsed by the ERAS® Society.</div></details>
+    </div>
+  </div>
+</section>
+
+</main>
+<script src="assets/site.js"></script>
+<script>
+(() => {
+  const t = new URLSearchParams(location.search).get('topic');
+  if (t) { const s = document.getElementById('c-topic'); if ([...s.options].some(o => o.value === t)) s.value = t; }
+  const h = location.hash.slice(1), d = h && document.getElementById(h);
+  if (d && d.tagName === 'DETAILS') d.open = true;
+})();
+</script>
+</body>
+</html>

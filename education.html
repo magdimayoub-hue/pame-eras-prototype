@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Education · PAME ERAS Society</title>
+<meta name="description" content="Lectures, interviews, congress recordings, webinars and publications on enhanced recovery after surgery.">
+<link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+.feature{display:grid;grid-template-columns:1.35fr 1fr;gap:0;background:var(--navy-2);border-radius:24px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+.feature video{width:100%;height:100%;object-fit:cover;background:#000;aspect-ratio:16/9}
+.feature .txt{padding:clamp(22px,3.4vw,40px);display:grid;gap:12px;align-content:center}
+.feature .txt h3{color:#fff;font-size:clamp(22px,2.4vw,28px)}
+.feature .txt p{color:var(--on-navy-muted)}
+@media (max-width:860px){.feature{grid-template-columns:1fr}}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));gap:18px}
+.vcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;text-align:left;padding:0;cursor:pointer;transition:transform var(--fast) var(--ease),box-shadow var(--fast) var(--ease)}
+.vcard:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.vthumb{position:relative;aspect-ratio:16/9;background:var(--navy-2);overflow:hidden}
+.vthumb img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.vcard:hover .vthumb img{transform:scale(1.05)}
+.vthumb .play{position:absolute;inset:0;margin:auto;width:58px;height:58px;border-radius:50%;background:rgba(224,145,58,.95);display:grid;place-items:center;transition:transform var(--fast) var(--ease)}
+.vcard:hover .play{transform:scale(1.1)}
+.vthumb .play svg{width:22px;height:22px;margin-left:3px;color:var(--navy)}
+.vcard .body{padding:16px 18px 18px}
+.vcard .body b{font:700 17px/1.3 var(--f-display);color:var(--navy);display:block;margin-top:6px}
+.vmodal{position:fixed;inset:0;z-index:200;background:rgba(6,18,33,.92);display:none;place-items:center;padding:20px}
+.vmodal.open{display:grid;animation:fadeUp .3s var(--ease)}
+.vmodal .box{width:min(1000px,100%);position:relative}
+.vmodal iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:14px;background:#000}
+.vmodal button{position:absolute;right:0;top:-54px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;font-size:18px;cursor:pointer}
+.vmodal p{color:var(--on-navy-muted);font-size:13px;margin-top:10px}
+</style>
+</head>
+<body data-page="education">
+<main id="main">
+
+<section class="page-hero on-dark" data-trace>
+  <div class="hero-photo" style="background-image:url(img/events/all-africa-2019/3.jpg)"></div>
+  <div class="wrap">
+    <span class="crumbs load-in"><a href="index.html">Home</a> / Education</span>
+    <h1 class="h-xl load-in" style="--d:.08s">Learn enhanced recovery.</h1>
+    <p class="lede load-in" style="--d:.16s">Lectures, interviews and congress recordings for every member of the perioperative team. Free to watch.</p>
+  </div>
+</section>
+
+<section class="sec sec-navy on-dark">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Featured</span><h2 class="h-lg">On television: steps to faster recovery.</h2></div>
+    <div class="feature reveal">
+      <video controls preload="none" playsinline poster="img/founder-tv.jpg" src="https://magdimayoub-hue.github.io/pameras/media/alaan-tv-interview.mp4" aria-label="Alaan TV interview with Dr. Medhat Shalabi"></video>
+      <div class="txt">
+        <span class="tag navy" style="background:rgba(63,184,175,.16);color:var(--teal-2);justify-self:start">Alaan TV · 8 min · Arabic</span>
+        <h3>Enhanced Recovery After Surgery – Dr. Medhat Shalabi</h3>
+        <p>Dr. Medhat Shalabi, then Consultant and Head of the Anaesthesia Department at Al Zahra Hospital Dubai, speaks on Alaan TV about the steps to enhanced recovery after surgery.</p>
+        <p class="note">Live site: English subtitles to be added for accessibility.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Video library</span><h2 class="h-lg">Congresses, lectures and reports.</h2><p class="lede">From the Society's YouTube archive. Videos play here without leaving the site.</p></div>
+    <div class="vgrid stagger" id="vgrid"></div>
+    <p class="note" style="margin-top:16px">Four videos are titled only “PAME ERAS Society” on the old site. Better titles and descriptions needed.</p>
+  </div>
+</section>
+
+<section class="sec sec-sand">
+  <div class="wrap">
+    <div class="grid g3 stagger">
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><h3>Webinars</h3><p>Monthly online sessions on implementation topics, with recordings. Programme to plan.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5a2 2 0 012-2h12v18H6a2 2 0 01-2-2z"/><path d="M8 7h6"/></svg></div><h3>Publications</h3><p>Papers and protocols by Society members, with links to journals. List to compile.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></div><h3>Request a speaker</h3><p>Invite a Society expert to your congress or hospital.</p><p style="margin-top:12px"><a class="link-arrow" href="contact.html?topic=speaker">Ask us</a></p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+<div class="vmodal" id="vmodal" role="dialog" aria-modal="true" aria-label="Video player"><div class="box"><button aria-label="Close video">✕</button><iframe title="Video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe><p>Played with YouTube's privacy-enhanced mode.</p></div></div>
+<script src="assets/data.js"></script>
+<script src="assets/site.js"></script>
+<script>
+(() => {
+  const g = document.getElementById('vgrid'), modal = document.getElementById('vmodal'), frame = modal.querySelector('iframe');
+  let back = null;
+  g.innerHTML = PAME_VIDEOS.map(v => `<button class="vcard" data-id="${v.id}" aria-label="Play: ${v.title}"><div class="vthumb"><img src="https://i.ytimg.com/vi/${v.id}/hqdefault.jpg" alt="" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4l14 8-14 8z"/></svg></span></div><div class="body"><span class="tag">${v.kind}</span><b>${v.title}</b></div></button>`).join('');
+  PAME_observe(g.parentElement);
+  const close = () => { modal.classList.remove('open'); frame.src = ''; document.body.style.overflow = ''; back?.focus(); };
+  g.querySelectorAll('.vcard').forEach(b => b.addEventListener('click', () => {
+    back = b; frame.src = `https://www.youtube-nocookie.com/embed/${b.dataset.id}?autoplay=1&rel=0`;
+    modal.classList.add('open'); document.body.style.overflow = 'hidden'; modal.querySelector('button').focus();
+  }));
+  modal.querySelector('button').addEventListener('click', close);
+  modal.addEventListener('click', e => { if (e.target === modal) close(); });
+  addEventListener('keydown', e => { if (e.key === 'Escape' && modal.classList.contains('open')) close(); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>PAME ERAS Society · Better recovery after surgery</title>
+<meta name="description" content="The Pan African & Middle East ERAS Society helps hospital teams put enhanced recovery after surgery into practice.">
+<link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+/* hero */
+.home-hero{position:relative;background:var(--navy);color:var(--on-navy);overflow:hidden;padding:clamp(56px,8vw,96px) 0 250px}
+.home-hero::before{content:"";position:absolute;inset:-20% -10% auto auto;width:70vw;height:70vw;max-width:900px;max-height:900px;background:radial-gradient(circle,rgba(63,184,175,.18),transparent 62%);pointer-events:none}
+.home-hero .split{position:relative;z-index:1}
+.home-hero h1{color:#fff}
+.home-hero h1 .accent{display:inline-block}
+.home-hero .lede{margin-top:20px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.trust{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:34px;font:500 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--on-navy-muted)}
+.trust span::before{content:"●";color:var(--teal-2);margin-right:8px;font-size:9px;vertical-align:2px}
+.mosaic{position:relative;height:clamp(340px,40vw,470px)}
+.mosaic .photo{position:absolute;box-shadow:0 30px 60px -30px rgba(0,0,0,.6);border:4px solid rgba(255,255,255,.06)}
+.mosaic .p1{inset:0 22% 26% 0;animation:fadeUp .9s var(--ease) .15s both}
+.mosaic .p2{inset:34% 0 0 38%;animation:fadeUp .9s var(--ease) .35s both}
+.mosaic .p3{width:38%;aspect-ratio:1;left:4%;bottom:-2%;animation:fadeUp .9s var(--ease) .55s both}
+.mosaic figcaption{position:absolute;left:10px;bottom:10px;font:500 11px var(--f-mono);letter-spacing:.05em;color:#fff;background:rgba(11,37,69,.72);padding:4px 9px;border-radius:99px;backdrop-filter:blur(4px)}
+.badge-float{position:absolute;right:2%;top:-4%;background:var(--saffron);color:var(--navy);border-radius:16px;padding:12px 16px;box-shadow:var(--shadow);animation:fadeUp .9s var(--ease) .8s both,bob 6s ease-in-out 1.8s infinite}
+.badge-float b{font:800 28px/1 var(--f-display);display:block}
+.badge-float span{font-size:12px;font-weight:600}
+@keyframes bob{50%{transform:translateY(-8px)}}
+@media (max-width:900px){.mosaic{height:360px;margin-top:10px}}
+@media (max-width:520px){.mosaic{height:300px}.mosaic .p3{display:none}}
+
+.journey{position:absolute;left:0;bottom:64px;width:100%;height:160px;pointer-events:none}
+.journey .trace{fill:none;stroke:var(--teal-2);stroke-width:2.5;stroke-dasharray:2000;stroke-dashoffset:2000;animation:draw 3.2s var(--ease) .5s forwards}
+.journey .node{fill:var(--navy);stroke:var(--teal-2);stroke-width:2.5;opacity:0;transform-box:fill-box;transform-origin:center;animation:pop .5s var(--ease) forwards}
+.journey text{fill:#8FB3BF;font:500 11px var(--f-mono);letter-spacing:.1em;opacity:0;animation:fadeUp .6s ease forwards}
+.journey .pulse{fill:var(--saffron);offset-path:path("M0,100 C120,100 140,100 170,100 L190,64 L205,130 L220,100 C330,100 380,100 420,100 L440,58 L455,134 L470,100 C600,100 640,100 680,100 L700,68 L715,126 L730,100 C850,100 900,100 940,100 L960,72 L975,120 L990,100 C1100,100 1150,100 1200,100");opacity:0;animation:travel 7s linear 3.8s infinite}
+@keyframes travel{0%{offset-distance:0;opacity:1}96%{opacity:1}100%{offset-distance:100%;opacity:0}}
+@media (max-width:620px){.journey text{font-size:17px}}
+
+/* stats */
+.stats{margin-top:-62px;position:relative;z-index:2}
+.stats .grid{background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:10px;gap:0;grid-template-columns:repeat(4,1fr)}
+.stat{padding:20px 22px;border-right:1px solid var(--line)}
+.stat:last-child{border:0}
+.stat b{font:800 clamp(34px,4vw,48px)/1 var(--f-display);color:var(--navy);display:block}
+.stat span{font-size:14px;color:var(--muted);display:block;margin-top:6px}
+@media (max-width:760px){.stats .grid{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+
+/* pathway preview */
+.phases{display:grid;gap:10px}
+.phase-btn{display:grid;grid-template-columns:52px 1fr auto;gap:14px;align-items:center;text-align:left;background:var(--surface);border:1.5px solid var(--line);border-radius:14px;padding:14px 16px;cursor:pointer;transition:border-color var(--fast),box-shadow var(--fast),transform var(--fast) var(--ease)}
+.phase-btn:hover{transform:translateX(4px)}
+.phase-btn .n{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:var(--teal-soft);color:var(--teal);font:800 20px var(--f-display);transition:background var(--fast),color var(--fast)}
+.phase-btn b{font:700 18px var(--f-display);color:var(--navy);display:block}
+.phase-btn span{font-size:14px;color:var(--muted)}
+.phase-btn .chev{color:var(--muted);transition:transform var(--fast)}
+.phase-btn[aria-expanded=true]{border-color:var(--teal);box-shadow:var(--shadow)}
+.phase-btn[aria-expanded=true] .n{background:var(--teal);color:#fff}
+.phase-btn[aria-expanded=true] .chev{transform:rotate(90deg)}
+.phase-body{display:none;padding:4px 18px 12px 84px;color:var(--muted)}
+.phase-body ul{margin:0;padding-left:18px;display:grid;gap:4px}
+.phase-body.open{display:block;animation:fadeUp .4s var(--ease)}
+@media (max-width:520px){.phase-body{padding-left:18px}}
+.outcomes{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px}
+.outcome{background:var(--sand);border-radius:14px;padding:16px}
+.outcome b{font:700 16px var(--f-display);color:var(--navy);display:block}
+.outcome span{font-size:14px;color:var(--muted)}
+@media (max-width:420px){.outcomes{grid-template-columns:1fr}}
+
+/* events rail */
+.rail-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
+.rail-ctl{display:flex;gap:8px}
+.rail-ctl button{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--line);background:var(--surface);cursor:pointer;font-size:18px;color:var(--navy);transition:border-color var(--fast)}
+.rail-ctl button:hover{border-color:var(--navy)}
+.rail{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 20px 24px;margin:0 -20px;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.ev{flex:0 0 min(300px,78vw);scroll-snap-align:start;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;cursor:pointer;text-align:left;padding:0;transition:transform var(--fast) var(--ease),box-shadow var(--fast) var(--ease)}
+.ev:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.ev .photo{border-radius:0;aspect-ratio:4/3}
+.ev .photo .yr{position:absolute;left:12px;top:12px;background:var(--navy);color:#fff;font:700 15px var(--f-display);padding:4px 10px;border-radius:99px}
+.ev .photo .cnt{position:absolute;right:12px;bottom:12px;background:rgba(11,37,69,.75);color:#fff;font:500 11px var(--f-mono);padding:4px 9px;border-radius:99px}
+.ev .body{padding:16px 18px 18px}
+.ev .body .mono{color:var(--teal)}
+.ev .body b{font:700 18px/1.2 var(--f-display);color:var(--navy);display:block;margin-top:4px}
+.ev .noimg{aspect-ratio:4/3;display:grid;place-items:center;background:linear-gradient(135deg,var(--navy),var(--teal));color:#fff;font:800 44px var(--f-display);position:relative}
+
+/* founder */
+.founder{display:grid;grid-template-columns:.9fr 1.1fr;background:var(--surface);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
+.founder .photo{border-radius:0;min-height:360px}
+.founder .photo img{object-position:62% 30%}
+.founder .txt{padding:clamp(26px,4vw,48px);display:grid;gap:16px;align-content:center}
+.founder blockquote{margin:0;font:600 clamp(19px,2vw,23px)/1.4 var(--f-display);color:var(--navy);border-left:4px solid var(--saffron);padding-left:18px}
+@media (max-width:860px){.founder{grid-template-columns:1fr}.founder .photo{min-height:260px}}
+
+/* cta */
+.cta-band{background:linear-gradient(120deg,var(--teal),#0A5F67);color:#fff;border-radius:28px;padding:clamp(32px,5vw,60px);display:grid;grid-template-columns:1.3fr auto;gap:28px;align-items:center;position:relative;overflow:hidden}
+.cta-band h2{color:#fff}
+.cta-band p{color:#D8F1EE;margin-top:10px;max-width:52ch}
+.cta-band svg.bg{position:absolute;right:-40px;top:-30px;width:320px;opacity:.12}
+@media (max-width:760px){.cta-band{grid-template-columns:1fr}}
+</style>
+</head>
+<body data-page="home">
+<main id="main">
+
+<!-- HERO -->
+<section class="home-hero on-dark">
+  <div class="wrap split">
+    <div>
+      <span class="kicker load-in">Pan African &amp; Middle East ERAS Society</span>
+      <h1 class="h-xl load-in" style="--d:.1s;margin-top:18px">Better recovery after surgery, <span class="accent">across two continents.</span></h1>
+      <p class="lede load-in" style="--d:.2s">We help hospital teams across Africa and the Middle East put evidence-based enhanced recovery pathways into practice, so patients recover faster, with fewer complications, and go home sooner.</p>
+      <div class="ctas load-in" style="--d:.3s">
+        <a class="btn btn-pri" href="join.html">Register your interest <span></span></a>
+        <a class="btn btn-ghost" href="implement.html">Bring ERAS® to your hospital</a>
+      </div>
+      <div class="trust load-in" style="--d:.4s"><span>Since 2015</span><span>Independent</span><span>Follows ERAS® Society guidelines</span></div>
+    </div>
+    <div class="mosaic" aria-hidden="true">
+      <figure class="photo p1" style="margin:0"><img src="img/events/cairo-2017/3.jpg" alt=""><figcaption>Cairo · 2017</figcaption></figure>
+      <figure class="photo p2" style="margin:0"><img src="img/events/all-africa-2019/6.jpg" alt=""><figcaption>All Africa · 2019</figcaption></figure>
+      <figure class="photo p3" style="margin:0"><img src="img/events/eras-asia-2019/5.jpg" alt="" style="object-position:40% 30%"></figure>
+      <div class="badge-float"><b class="count" data-count="11">11</b><span>countries in our event archive</span></div>
+    </div>
+  </div>
+  <svg class="journey" viewBox="0 0 1200 160" preserveAspectRatio="none" aria-hidden="true">
+    <path class="trace" d="M0,100 C120,100 140,100 170,100 L190,64 L205,130 L220,100 C330,100 380,100 420,100 L440,58 L455,134 L470,100 C600,100 640,100 680,100 L700,68 L715,126 L730,100 C850,100 900,100 940,100 L960,72 L975,120 L990,100 C1100,100 1150,100 1200,100"/>
+    <circle class="node" cx="170" cy="100" r="6" style="animation-delay:1s"/><text x="138" y="150" style="animation-delay:1.1s">BEFORE</text>
+    <circle class="node" cx="420" cy="100" r="6" style="animation-delay:1.6s"/><text x="384" y="150" style="animation-delay:1.7s">IN THEATRE</text>
+    <circle class="node" cx="680" cy="100" r="6" style="animation-delay:2.2s"/><text x="652" y="150" style="animation-delay:2.3s">AFTER</text>
+    <circle class="node" cx="940" cy="100" r="6" style="animation-delay:2.8s"/><text x="898" y="150" style="animation-delay:2.9s">HOME SOONER</text>
+    <circle class="pulse" r="5"/>
+  </svg>
+</section>
+
+<!-- STATS -->
+<div class="stats wrap">
+  <div class="grid stagger">
+    <div class="stat"><b class="count" data-count="2015" data-from="1990">2015</b><span>Founded in Dubai</span></div>
+    <div class="stat"><b class="count" data-count="3">3</b><span>PAME ERAS conferences</span></div>
+    <div class="stat"><b class="count" data-count="16">16</b><span>Events in our archive</span></div>
+    <div class="stat"><b class="count" data-count="11">11</b><span>Countries reached</span></div>
+  </div>
+</div>
+
+<!-- WHAT IS ERAS -->
+<section class="sec">
+  <div class="wrap split" style="align-items:start">
+    <div class="reveal">
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="kicker">Enhanced Recovery After Surgery</span>
+        <h2 class="h-lg">One team, one pathway, a faster recovery.</h2>
+        <p class="lede">ERAS® is an evidence-based, multidisciplinary approach to care around surgery. Small, proven steps before, during and after the operation reduce the body's stress response, so patients get back on their feet sooner.</p>
+      </div>
+      <div class="outcomes stagger">
+        <div class="outcome"><b>Shorter stays</b><span>Patients go home sooner</span></div>
+        <div class="outcome"><b>Fewer complications</b><span>Medical and surgical</span></div>
+        <div class="outcome"><b>Fewer readmissions</b><span>Recovery that lasts</span></div>
+        <div class="outcome"><b>Happier patients</b><span>Partners in their own care</span></div>
+      </div>
+      <p style="margin-top:22px"><a class="link-arrow" href="eras.html">Learn how ERAS® works</a></p>
+    </div>
+    <div class="phases reveal" style="--d:.1s" id="phases">
+      <button class="phase-btn" aria-expanded="true" aria-controls="ph1"><span class="n">1</span><span><b>Before surgery</b><span>Prepare the patient</span></span><span class="chev">›</span></button>
+      <div class="phase-body open" id="ph1"><ul><li>Education and shared expectations</li><li>Optimise nutrition, anaemia and fitness</li><li>Carbohydrate drink, shorter fasting</li></ul></div>
+      <button class="phase-btn" aria-expanded="false" aria-controls="ph2"><span class="n">2</span><span><b>In theatre</b><span>Protect the body</span></span><span class="chev">›</span></button>
+      <div class="phase-body" id="ph2"><ul><li>Minimally invasive surgery where possible</li><li>Tailored anaesthesia and fluids</li><li>Opioid-sparing pain relief, warmth</li></ul></div>
+      <button class="phase-btn" aria-expanded="false" aria-controls="ph3"><span class="n">3</span><span><b>After surgery</b><span>Restore function</span></span><span class="chev">›</span></button>
+      <div class="phase-body" id="ph3"><ul><li>Early eating and drinking</li><li>Out of bed on the same or next day</li><li>Early removal of drips, drains and catheters</li></ul></div>
+      <button class="phase-btn" aria-expanded="false" aria-controls="ph4"><span class="n">4</span><span><b>Audit</b><span>Measure and improve</span></span><span class="chev">›</span></button>
+      <div class="phase-body" id="ph4"><ul><li>Track compliance with each element</li><li>Compare outcomes over time</li><li>Feed results back to the whole team</li></ul></div>
+      <p class="note" style="margin-top:8px">General summary of ERAS® principles. Protocols vary by specialty; follow the published guidelines.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE HELP -->
+<section class="sec sec-sand">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="kicker">What we do</span>
+      <h2 class="h-lg">From first audit to full pathway.</h2>
+      <p class="lede">We work with hospitals, ministries and specialist societies to make enhanced recovery the standard of care.</p>
+    </div>
+    <div class="grid g3 stagger">
+      <a class="card" href="implement.html"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div><h3>Implement</h3><p>Step-by-step support to start an ERAS® programme: team, protocol, audit and sustaining results.</p><p style="margin-top:14px"><span class="link-arrow">How to start</span></p></a>
+      <a class="card" href="education.html"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8l10-5 10 5-10 5z"/><path d="M6 10v5c3 2 9 2 12 0v-5"/></svg></div><h3>Educate</h3><p>Congresses, workshops, webinars and recorded lectures for every member of the perioperative team.</p><p style="margin-top:14px"><span class="link-arrow">Watch and learn</span></p></a>
+      <a class="card" href="events.html"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></div><h3>Connect</h3><p>A network of clinicians across Africa and the Middle East, sharing protocols, data and experience.</p><p style="margin-top:14px"><span class="link-arrow">Our events</span></p></a>
+    </div>
+  </div>
+</section>
+
+<!-- REACH -->
+<section class="sec sec-navy on-dark">
+  <div class="wrap">
+    <div class="split" style="align-items:end;margin-bottom:28px">
+      <div class="sec-head reveal" style="margin-bottom:0">
+        <span class="kicker">Our reach</span>
+        <h2 class="h-lg">From Dubai to two continents.</h2>
+      </div>
+      <p class="lede reveal" style="--d:.1s">Since the first meeting in Dubai in 2015, the Society and its founder have taken enhanced recovery to congresses and hospitals across the region and beyond. Tap a city.</p>
+    </div>
+    <div class="map-box" data-in id="mapBox">
+      <svg id="map" role="group" aria-label="Map of cities in the PAME ERAS event archive"></svg>
+      <div class="map-pop" id="mapPop" role="status"><button class="x" aria-label="Close">✕</button><h4></h4><ul></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS RAIL -->
+<section class="sec">
+  <div class="wrap">
+    <div class="rail-head reveal" style="margin-bottom:22px">
+      <div class="sec-head" style="margin-bottom:0"><span class="kicker">Events archive</span><h2 class="h-lg">A decade of meetings.</h2></div>
+      <div class="rail-ctl"><button data-dir="-1" aria-label="Scroll back">←</button><button data-dir="1" aria-label="Scroll forward">→</button></div>
+    </div>
+    <div class="rail" id="rail"></div>
+    <p style="margin-top:8px"><a class="link-arrow" href="events.html">All events and galleries</a></p>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section class="sec sec-sand">
+  <div class="wrap">
+    <div class="founder reveal">
+      <div class="photo"><img src="img/founder-tv.jpg" alt="Prof. Medhat Shalabi speaking in a television interview" loading="lazy"></div>
+      <div class="txt">
+        <span class="kicker">Founder &amp; President</span>
+        <h2 class="h-lg" style="font-size:clamp(28px,3.4vw,40px)">Prof. Medhat Shalabi</h2>
+        <blockquote>“I was convinced that ERAS protocols were the best platform for improving the quality of peri-operative care, with significant benefits to both the patient and the institution.”</blockquote>
+        <p style="color:var(--muted)">Trained in Alexandria and the UK, he returned to the Middle East and founded PAME ERAS to reduce the variability he saw in surgical care, starting with the first meeting in Dubai in February 2015.</p>
+        <div class="ctas" style="margin-top:6px"><a class="btn btn-navy" href="founder.html">Read his profile</a><a class="btn btn-ghost" href="about.html#welcome">His welcome letter</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <svg class="bg" viewBox="0 0 100 90" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12,39 L16,39 L39.8,84 L89.8,28.4" stroke-width="7"/><path d="M6,24 L25,24 L43,58 L88,8" stroke-width="9"/></svg>
+      <div><h2 class="h-lg">Be part of the network.</h2><p>Register your interest to hear about events, guidelines and membership as it opens. It takes a minute and is free.</p></div>
+      <a class="btn btn-pri" href="join.html">Register your interest</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<script src="assets/data.js"></script>
+<script src="assets/map.js"></script>
+<script src="assets/site.js"></script>
+<script>
+(() => {
+  // arrow in hero button
+  document.querySelector('.home-hero .btn-pri span').outerHTML = PAME_ARROW;
+
+  // phase accordion
+  const btns = [...document.querySelectorAll('.phase-btn')];
+  btns.forEach(b => b.addEventListener('click', () => {
+    btns.forEach(o => { const on = o === b; o.setAttribute('aria-expanded', on); document.getElementById(o.getAttribute('aria-controls')).classList.toggle('open', on); });
+  }));
+
+  // map
+  const pop = document.getElementById('mapPop');
+  PAME_map(document.getElementById('map'), PAME_EVENTS, (evs, city) => {
+    pop.querySelector('h4').textContent = city;
+    pop.querySelector('ul').innerHTML = evs.map(e => `<li><b>${e.year} · ${e.title}</b>${e.note}</li>`).join('');
+    pop.classList.add('show');
+  });
+  pop.querySelector('.x').addEventListener('click', () => pop.classList.remove('show'));
+
+  // events rail (newest first)
+  const rail = document.getElementById('rail');
+  [...PAME_EVENTS].reverse().forEach(e => {
+    const b = document.createElement('button');
+    b.className = 'ev';
+    const cover = PAME_COVER[e.id];
+    b.innerHTML = (e.photos
+      ? `<div class="photo"><img src="img/events/${e.id}/${cover}.jpg" alt="" loading="lazy"><span class="yr">${e.year}</span><span class="cnt">${e.photos} photo${e.photos > 1 ? 's' : ''}</span></div>`
+      : `<div class="noimg">${e.year}<span class="cnt" style="position:absolute;right:12px;bottom:12px;font:500 11px var(--f-mono);background:rgba(11,37,69,.6);padding:4px 9px;border-radius:99px">Photos needed</span></div>`)
+      + `<div class="body"><span class="mono">${e.city}</span><b>${e.title}</b></div>`;
+    b.setAttribute('aria-label', `${e.year}, ${e.city}: ${e.title}${e.photos ? ', open photo gallery' : ''}`);
+    b.addEventListener('click', () => e.photos ? PAME_gallery(PAME_label(e), PAME_photos(e), cover - 1) : location.href = 'events.html#' + e.id);
+    rail.appendChild(b);
+  });
+  document.querySelectorAll('.rail-ctl button').forEach(b => b.addEventListener('click', () => rail.scrollBy({left: +b.dataset.dir * rail.clientWidth * .8, behavior: 'smooth'})));
+})();
+</script>
+</body>
+</html>

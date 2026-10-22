@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Events · PAME ERAS Society</title>
+<meta name="description" content="PAME ERAS congresses, workshops and meetings: upcoming events and the archive since 2015, with photo galleries.">
+<link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+.next{display:grid;grid-template-columns:auto 1fr auto;gap:clamp(18px,3vw,36px);align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:clamp(22px,3.4vw,36px);box-shadow:var(--shadow)}
+.date-tile{width:110px;height:120px;border-radius:18px;background:var(--navy);color:#fff;display:grid;place-items:center;align-content:center;text-align:center}
+.date-tile b{font:800 34px/1 var(--f-display)}
+.date-tile span{font:500 11px var(--f-mono);letter-spacing:.1em;color:var(--teal-2);margin-top:6px}
+@media (max-width:760px){.next{grid-template-columns:1fr}.date-tile{width:100%;height:auto;padding:18px}}
+.filters{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:24px}
+.count-lbl{font:500 13px var(--f-mono);color:var(--muted)}
+.evgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:18px}
+.evcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform var(--fast) var(--ease),box-shadow var(--fast) var(--ease);animation:fadeUp .5s var(--ease) both;scroll-margin-top:110px}
+.evcard:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.evcard:target{outline:3px solid var(--saffron);outline-offset:3px}
+.evcard .photo{border-radius:0;aspect-ratio:4/3;cursor:pointer;border:0;padding:0;width:100%}
+.evcard .photo .yr{position:absolute;left:12px;top:12px;background:var(--navy);color:#fff;font:700 15px var(--f-display);padding:4px 10px;border-radius:99px}
+.evcard .photo .cnt{position:absolute;right:12px;bottom:12px;background:rgba(11,37,69,.78);color:#fff;font:500 11px var(--f-mono);padding:5px 10px;border-radius:99px;display:flex;gap:6px;align-items:center}
+.evcard .noimg{aspect-ratio:4/3;background:linear-gradient(135deg,var(--navy),var(--teal));display:grid;place-items:center;color:#fff;font:800 48px var(--f-display);position:relative}
+.evcard .body{padding:18px 20px 20px;display:grid;gap:6px;flex:1}
+.evcard .body .mono{color:var(--teal)}
+.evcard .body h3{font-size:19px}
+.evcard .body p{font-size:14px;color:var(--muted)}
+.evcard .own{justify-self:start}
+</style>
+</head>
+<body data-page="events">
+<main id="main">
+
+<section class="page-hero on-dark" data-trace>
+  <div class="hero-photo" style="background-image:url(img/events/liverpool-2019/6.jpg)"></div>
+  <div class="wrap">
+    <span class="crumbs load-in"><a href="index.html">Home</a> / Events</span>
+    <h1 class="h-xl load-in" style="--d:.08s">Congresses, workshops and meetings.</h1>
+    <p class="lede load-in" style="--d:.16s">Where the network meets: PAME ERAS conferences, joint meetings with national societies, and talks at international congresses.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Upcoming</span><h2 class="h-lg">Next on the calendar</h2></div>
+    <div class="next reveal">
+      <div class="date-tile"><b>TBA</b><span>2027</span></div>
+      <div><span class="tag saffron">Date to be announced</span><h3 class="h-md" style="margin-top:10px">4th PAME ERAS Congress</h3><p style="color:var(--muted);margin-top:6px">Host city, dates, programme and CME/CPD accreditation will appear here, with online registration.</p></div>
+      <a class="btn btn-pri" href="join.html">Notify me</a>
+    </div>
+    <p class="note" style="margin-top:14px">Placeholder: the Society needs to confirm the next event before launch.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Archive</span><h2 class="h-lg">Every meeting since 2015</h2><p class="lede">Tap a photo to open the gallery. Event details marked “to confirm” come from photo captions on the old website.</p></div>
+    <div class="filters reveal">
+      <div class="chips" id="years" role="group" aria-label="Filter by year"></div>
+      <span class="count-lbl" id="countLbl" aria-live="polite"></span>
+    </div>
+    <div class="evgrid" id="grid"></div>
+  </div>
+</section>
+
+<section class="sec sec-navy on-dark">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">On the map</span><h2 class="h-lg">Where we've been.</h2></div>
+    <div class="map-box" data-in>
+      <svg id="map" role="group" aria-label="Map of event cities"></svg>
+      <div class="map-pop" id="mapPop" role="status"><button class="x" aria-label="Close">✕</button><h4></h4><ul></ul></div>
+    </div>
+  </div>
+</section>
+
+</main>
+<script src="assets/data.js"></script>
+<script src="assets/map.js"></script>
+<script src="assets/site.js"></script>
+<script>
+(() => {
+  const grid = document.getElementById('grid'), years = document.getElementById('years'), lbl = document.getElementById('countLbl');
+  const list = [...PAME_EVENTS].reverse();
+  const ys = ['All', ...new Set(list.map(e => e.year))];
+  years.innerHTML = ys.map((y, i) => `<button class="chip" aria-pressed="${i === 0}" data-y="${y}">${y}</button>`).join('');
+  const cam = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l2-3h4l2 3"/></svg>';
+  const render = y => {
+    const evs = list.filter(e => y === 'All' || e.year === +y);
+    grid.innerHTML = evs.map((e, i) => {
+      const media = e.photos
+        ? `<button class="photo" data-id="${e.id}" aria-label="Open ${e.photos} photos from ${e.city} ${e.year}"><img src="img/events/${e.id}/${PAME_COVER[e.id]}.jpg" alt="" loading="lazy"><span class="yr">${e.year}</span><span class="cnt">${cam}${e.photos}</span></button>`
+        : `<div class="noimg">${e.year}<span class="cnt" style="position:absolute;right:12px;bottom:12px;font:500 11px var(--f-mono);background:rgba(11,37,69,.6);padding:5px 10px;border-radius:99px">Photos needed</span></div>`;
+      return `<article class="evcard" id="${e.id}" style="animation-delay:${Math.min(i, 8) * .05}s">${media}<div class="body"><span class="mono">${e.city}${e.country !== e.city ? ' · ' + e.country : ''}</span><h3>${e.title}</h3><p>${e.note}</p>${e.own ? '<span class="tag own">PAME ERAS event</span>' : ''}</div></article>`;
+    }).join('');
+    lbl.textContent = `${evs.length} event${evs.length > 1 ? 's' : ''}`;
+    grid.querySelectorAll('button.photo').forEach(b => b.addEventListener('click', () => {
+      const e = PAME_EVENTS.find(x => x.id === b.dataset.id);
+      PAME_gallery(PAME_label(e), PAME_photos(e), PAME_COVER[e.id] - 1);
+    }));
+  };
+  years.querySelectorAll('.chip').forEach(c => c.addEventListener('click', () => { years.querySelectorAll('.chip').forEach(x => x.setAttribute('aria-pressed', x === c)); render(c.dataset.y); }));
+  render('All');
+  if (location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView();
+
+  const pop = document.getElementById('mapPop');
+  PAME_map(document.getElementById('map'), PAME_EVENTS, (evs, city) => {
+    pop.querySelector('h4').textContent = city;
+    pop.querySelector('ul').innerHTML = evs.map(e => `<li><b>${e.year} · ${e.title}</b><a href="#${e.id}">See event</a></li>`).join('');
+    pop.classList.add('show');
+  });
+  pop.querySelector('.x').addEventListener('click', () => pop.classList.remove('show'));
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Implement ERAS® · PAME ERAS Society</title>
+<meta name="description" content="How to start an ERAS programme in your hospital: steps, guidelines by specialty, centres of excellence and support from PAME ERAS.">
+<link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+.steps{position:relative;display:grid;gap:16px;counter-reset:s}
+.steps::before{content:"";position:absolute;left:31px;top:30px;bottom:30px;width:2px;background:var(--line)}
+.steps .bar{position:absolute;left:31px;top:30px;width:2px;height:var(--p,0%);background:linear-gradient(var(--teal),var(--saffron))}
+.step{position:relative;display:grid;grid-template-columns:64px 1fr;gap:20px;align-items:start}
+.step .n{width:64px;height:64px;border-radius:18px;background:var(--surface);border:2px solid var(--line);display:grid;place-items:center;font:800 24px var(--f-display);color:var(--navy);position:relative;z-index:1;transition:all .5s var(--ease)}
+.step.lit .n{background:var(--teal);border-color:var(--teal);color:#fff;box-shadow:0 10px 24px -10px rgba(14,124,134,.8)}
+.step .card{padding:20px 22px}
+.step .card ul{margin:10px 0 0;padding-left:18px;color:var(--muted);display:grid;gap:4px;font-size:15px}
+.lib{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:clamp(16px,2.6vw,28px)}
+.lib-top{display:flex;gap:12px;flex-wrap:wrap;justify-content:space-between;align-items:center;margin-bottom:18px}
+.search{position:relative;flex:1 1 260px;max-width:380px}
+.search input{width:100%;border:1.5px solid var(--line);border-radius:99px;padding:11px 16px 11px 42px;font:15px var(--f-body);background:var(--bg)}
+.search input:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 4px rgba(14,124,134,.15)}
+.search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:var(--muted)}
+.gl{display:grid;gap:10px}
+.gl-item{display:grid;grid-template-columns:52px 1fr auto;gap:16px;align-items:center;padding:14px 16px;border:1px solid var(--line);border-radius:14px;transition:border-color var(--fast),transform var(--fast) var(--ease),opacity .3s}
+.gl-item:hover{border-color:var(--teal);transform:translateX(4px)}
+.gl-item[hidden]{display:none}
+.gl-item .ico{width:52px;height:52px;border-radius:14px;background:var(--teal-soft);color:var(--teal);display:grid;place-items:center}
+.gl-item .ico svg{width:24px;height:24px}
+.gl-item b{display:block;font:700 17px var(--f-display);color:var(--navy)}
+.gl-item span{font-size:13px;color:var(--muted)}
+.gl-item>div{min-width:0}
+.gl-item b{overflow-wrap:anywhere;hyphens:auto}
+@media (max-width:560px){.gl-item{grid-template-columns:44px 1fr}.gl-item .ico{width:44px;height:44px}.gl-item>.link-arrow{display:none}}
+.gl-empty{display:none;text-align:center;color:var(--muted);padding:30px}
+.coe{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:16px}
+.coe .card .tag{margin-bottom:12px}
+.form-wrap{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:clamp(22px,4vw,44px);box-shadow:var(--shadow)}
+</style>
+</head>
+<body data-page="implement">
+<main id="main">
+
+<section class="page-hero on-dark" data-trace>
+  <div class="hero-photo" style="background-image:url(img/events/all-africa-2019/6.jpg)"></div>
+  <div class="wrap">
+    <span class="crumbs load-in"><a href="index.html">Home</a> / Implement</span>
+    <h1 class="h-xl load-in" style="--d:.08s">Bring ERAS® to your hospital.</h1>
+    <p class="lede load-in" style="--d:.16s">A practical route from the first conversation to a measured, sustained programme. We can help at every step.</p>
+    <div class="load-in" style="--d:.24s;display:flex;gap:12px;flex-wrap:wrap;margin-top:8px"><a class="btn btn-pri" href="#support">Request support</a><a class="btn btn-ghost" href="#guidelines">Find a guideline</a></div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section class="sec">
+  <div class="wrap split" style="align-items:start">
+    <div class="sec-head reveal" style="position:sticky;top:110px">
+      <span class="kicker">How to start</span>
+      <h2 class="h-lg">Five steps to a working programme.</h2>
+      <p class="lede">Start with one procedure, prove the benefit, then scale.</p>
+    </div>
+    <div class="steps" id="steps">
+      <span class="bar"></span>
+      <div class="step"><span class="n">1</span><div class="card"><h3>Build the team</h3><p>A clinical lead from surgery and anaesthesia, a nurse coordinator, and support from management.</p><ul><li>Name an ERAS coordinator</li><li>Secure time and a small budget</li></ul></div></div>
+      <div class="step"><span class="n">2</span><div class="card"><h3>Choose a procedure and a protocol</h3><p>Pick one high-volume operation and adapt the matching ERAS® Society guideline to your hospital.</p><ul><li>Colorectal, caesarean or joint replacement are common starts</li><li>Agree each element with every discipline</li></ul></div></div>
+      <div class="step"><span class="n">3</span><div class="card"><h3>Measure your baseline</h3><p>Audit current practice and outcomes before changing anything, so you can prove the difference.</p><ul><li>Length of stay, complications, readmissions</li><li>Compliance with each protocol element</li></ul></div></div>
+      <div class="step"><span class="n">4</span><div class="card"><h3>Train and launch</h3><p>Teach the whole pathway: clinic, ward, theatre and recovery staff, and the patients themselves.</p><ul><li>Patient information in local languages</li><li>Order sets and checklists</li></ul></div></div>
+      <div class="step"><span class="n">5</span><div class="card"><h3>Audit, feed back, sustain</h3><p>Review compliance and outcomes regularly, share the results, and expand to new procedures.</p><ul><li>Monthly team meetings</li><li>Celebrate results, fix gaps</li></ul></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- GUIDELINES -->
+<section class="sec sec-sand" id="guidelines">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Guidelines library</span><h2 class="h-lg">Find the right guideline.</h2><p class="lede">ERAS® Society guidelines are free to read. We link to the official versions rather than copying them, so you always get the latest.</p></div>
+    <div class="lib reveal">
+      <div class="lib-top">
+        <div class="chips" id="chips" role="group" aria-label="Filter by specialty">
+          <button class="chip" aria-pressed="true" data-f="all">All</button>
+          <button class="chip" aria-pressed="false" data-f="gi">GI &amp; colorectal</button>
+          <button class="chip" aria-pressed="false" data-f="obs">Obstetrics &amp; gynaecology</button>
+          <button class="chip" aria-pressed="false" data-f="ortho">Orthopaedics</button>
+          <button class="chip" aria-pressed="false" data-f="other">Other</button>
+        </div>
+        <label class="search"><span class="sr">Search guidelines</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="q" type="search" placeholder="Search, e.g. caesarean"></label>
+      </div>
+      <div class="gl" id="gl"></div>
+      <p class="gl-empty" id="glEmpty">No guideline matches. Try another word, or <a href="#support">ask us</a>.</p>
+      <p class="note" style="margin-top:16px">Titles are examples for the prototype. Before launch, each entry is checked against the ERAS® Society's current list and linked to its official page.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CENTRES -->
+<section class="sec" id="centres">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Centres of Excellence</span><h2 class="h-lg">Hospitals leading the way.</h2><p class="lede">A recognition programme for hospitals that run audited ERAS® pathways and help others learn. Criteria are being drafted by the board.</p></div>
+    <div class="coe stagger">
+      <div class="card lift"><span class="tag saffron">Criteria to define</span><h3>Hospital name</h3><p>City, country · procedures covered · year recognised</p></div>
+      <div class="card lift"><span class="tag saffron">Criteria to define</span><h3>Hospital name</h3><p>City, country · procedures covered · year recognised</p></div>
+      <div class="card lift"><span class="tag saffron">Criteria to define</span><h3>Hospital name</h3><p>City, country · procedures covered · year recognised</p></div>
+      <a class="card" href="#support" style="background:var(--navy);border-color:var(--navy)"><h3 style="color:#fff">Is your hospital ready?</h3><p style="color:var(--on-navy-muted)">Tell us about your programme and we'll be in touch when applications open.</p><p style="margin-top:14px"><span class="link-arrow" style="color:var(--teal-2)">Get in touch</span></p></a>
+    </div>
+  </div>
+</section>
+
+<!-- SUPPORT FORM -->
+<section class="sec sec-sand" id="support">
+  <div class="wrap split" style="align-items:start">
+    <div class="sec-head reveal">
+      <span class="kicker">Request support</span>
+      <h2 class="h-lg">Tell us about your hospital.</h2>
+      <p class="lede">Workshops, protocol reviews, audit set-up or lectures for your team. We will reply by email.</p>
+    </div>
+    <div class="form-wrap reveal" style="--d:.1s">
+      <form class="form" data-validate>
+        <div class="row2">
+          <div class="field"><label for="s-name">Your name</label><input id="s-name" name="name" autocomplete="name" required><span class="err">Please enter your name.</span></div>
+          <div class="field"><label for="s-email">Work email</label><input id="s-email" name="email" type="email" autocomplete="email" required><span class="err">Please enter a valid email.</span></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="s-hosp">Hospital</label><input id="s-hosp" name="hospital" required><span class="err">Please enter your hospital.</span></div>
+          <div class="field"><label for="s-country">Country</label><input id="s-country" name="country" autocomplete="country-name" required><span class="err">Please enter your country.</span></div>
+        </div>
+        <div class="field"><label for="s-need">What would help most?</label><select id="s-need" name="need" required><option value="">Choose one</option><option>Starting a new ERAS programme</option><option>Reviewing an existing protocol</option><option>Setting up audit</option><option>Training or a workshop</option><option>A lecture or talk</option><option>Something else</option></select><span class="err">Please choose an option.</span></div>
+        <div class="field"><label for="s-msg">Details <small>(optional)</small></label><textarea id="s-msg" name="message" placeholder="Procedures, team size, timeline…"></textarea></div>
+        <label class="check"><input type="checkbox" required><span>I agree that PAME ERAS may store these details to answer my request, as described in the <a href="contact.html#privacy">privacy policy</a>.</span></label>
+        <div><button class="btn btn-pri" type="submit">Send request</button></div>
+      </form>
+      <div class="form-done" tabindex="-1"><svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="26" cy="26" r="24" stroke-width="2" opacity=".25"/><path d="M15 27l7 7 15-16"/></svg><h3 style="font-size:24px">Request received</h3><p style="color:var(--muted);margin-top:8px">Thank you. In the live site this goes to the Society's inbox, and you'd get a confirmation email.</p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+<script src="assets/site.js"></script>
+<script>
+(() => {
+  // steps progress
+  const wrap = document.getElementById('steps'), bar = wrap.querySelector('.bar'), steps = [...wrap.querySelectorAll('.step')];
+  const upd = () => {
+    const r = wrap.getBoundingClientRect(), mid = innerHeight * .6;
+    bar.style.setProperty('--p', Math.max(0, Math.min(1, (mid - r.top) / r.height)) * 100 + '%');
+    steps.forEach(s => s.classList.toggle('lit', s.getBoundingClientRect().top + 30 < mid));
+  };
+  addEventListener('scroll', upd, {passive: true}); upd();
+
+  // guidelines library (illustrative titles)
+  const G = [
+    ['gi', 'Elective colorectal surgery'], ['gi', 'Bariatric surgery'], ['gi', 'Pancreaticoduodenectomy'], ['gi', 'Liver surgery'], ['gi', 'Gastrectomy'], ['gi', 'Oesophagectomy'],
+    ['obs', 'Caesarean section (ERACS)'], ['obs', 'Gynaecologic / oncology surgery'],
+    ['ortho', 'Hip and knee replacement'], ['ortho', 'Lumbar spinal fusion'],
+    ['other', 'Cardiac surgery'], ['other', 'Lung surgery'], ['other', 'Cystectomy'], ['other', 'Head and neck surgery'], ['other', 'Breast reconstruction']
+  ];
+  const L = {gi: 'GI & colorectal', obs: 'Obstetrics & gynaecology', ortho: 'Orthopaedics', other: 'Other specialties'};
+  const gl = document.getElementById('gl');
+  gl.innerHTML = G.map(([t, n]) => `<a class="gl-item" data-t="${t}" href="https://erassociety.org/guidelines/" target="_blank" rel="noopener" style="text-decoration:none"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></svg></span><div><b>${n}</b><span>ERAS® Society guideline · ${L[t]}</span></div><span class="link-arrow">Open ↗</span></a>`).join('');
+  const items = [...gl.children], chips = [...document.querySelectorAll('#chips .chip')], q = document.getElementById('q');
+  let f = 'all';
+  const apply = () => {
+    const term = q.value.trim().toLowerCase(); let shown = 0;
+    items.forEach(it => { const ok = (f === 'all' || it.dataset.t === f) && it.textContent.toLowerCase().includes(term); it.hidden = !ok; shown += ok; });
+    document.getElementById('glEmpty').style.display = shown ? 'none' : 'block';
+  };
+  chips.forEach(c => c.addEventListener('click', () => { f = c.dataset.f; chips.forEach(x => x.setAttribute('aria-pressed', x === c)); apply(); }));
+  q.addEventListener('input', apply);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>What is ERAS® · PAME ERAS Society</title>
+<meta name="description" content="Enhanced Recovery After Surgery explained: the patient pathway, benefits, ERACS and frequently asked questions.">
+<link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+/* pathway explorer */
+.explorer{background:var(--navy-2);border-radius:24px;padding:clamp(20px,3vw,36px);border:1px solid rgba(255,255,255,.08)}
+.track{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:28px}
+.track::before{content:"";position:absolute;left:12.5%;right:12.5%;top:27px;height:3px;background:rgba(255,255,255,.12);border-radius:3px}
+.track .fill{position:absolute;left:12.5%;top:27px;height:3px;background:linear-gradient(90deg,var(--teal-2),var(--saffron));border-radius:3px;width:calc(75% * var(--p,0));transition:width .6s var(--ease)}
+.stop{position:relative;z-index:1;display:grid;justify-items:center;gap:10px;background:none;border:0;cursor:pointer;color:var(--on-navy-muted);font:600 15px var(--f-body);padding:0}
+.stop .n{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:var(--navy);border:3px solid rgba(255,255,255,.18);color:#fff;font:800 20px var(--f-display);transition:all .4s var(--ease)}
+.stop[aria-selected=true]{color:#fff}
+.stop[aria-selected=true] .n{border-color:var(--saffron);background:var(--saffron);color:var(--navy);transform:scale(1.08)}
+.stop.done .n{border-color:var(--teal-2);background:var(--teal-2);color:var(--navy)}
+.panel{display:none;grid-template-columns:1fr 1fr;gap:clamp(18px,3vw,36px);align-items:start}
+.panel.on{display:grid;animation:fadeUp .5s var(--ease)}
+.panel h3{color:#fff;font-size:clamp(22px,2.4vw,28px);margin-bottom:10px}
+.panel p{color:var(--on-navy-muted)}
+.panel ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.panel li{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:start;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:12px 14px;color:var(--on-navy)}
+.panel li svg{width:22px;height:22px;color:var(--teal-2);margin-top:1px}
+.panel li small{display:block;color:var(--on-navy-muted);font-size:13px}
+.explorer-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:24px;flex-wrap:wrap}
+.play{display:inline-flex;align-items:center;gap:8px;background:none;border:1px solid rgba(255,255,255,.25);color:#fff;border-radius:99px;padding:9px 16px;cursor:pointer;font:600 14px var(--f-body)}
+@media (max-width:760px){.panel{grid-template-columns:1fr}.stop span.lbl{font-size:12px}.stop .n{width:44px;height:44px;font-size:17px}.track::before,.track .fill{top:21px}}
+/* benefits */
+.benefit{display:grid;gap:10px}
+.benefit .meter{height:8px;border-radius:8px;background:var(--sand-2);overflow:hidden}
+.benefit .meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--teal-2));border-radius:8px;transition:width 1.4s var(--ease)}
+.in .benefit .meter i{width:var(--w)}
+/* faq */
+.faq{display:grid;gap:10px}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:box-shadow var(--fast)}
+.faq details[open]{box-shadow:var(--shadow);border-color:transparent}
+.faq summary{list-style:none;cursor:pointer;padding:18px 22px;font:700 18px var(--f-display);color:var(--navy);display:flex;justify-content:space-between;gap:16px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:400 26px/1 var(--f-body);color:var(--teal);transition:transform .3s var(--ease)}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .a{padding:0 22px 20px;color:var(--muted);max-width:75ch}
+.faq details[open] .a{animation:fadeUp .4s var(--ease)}
+.eracs{display:grid;grid-template-columns:1fr 1fr;border-radius:24px;overflow:hidden;background:var(--surface);border:1px solid var(--line)}
+.eracs .photo{border-radius:0;min-height:320px}
+.eracs .txt{padding:clamp(24px,4vw,48px);display:grid;gap:14px;align-content:center}
+@media (max-width:820px){.eracs{grid-template-columns:1fr}}
+</style>
+</head>
+<body data-page="eras">
+<main id="main">
+
+<section class="page-hero on-dark" data-trace>
+  <div class="wrap">
+    <span class="crumbs load-in"><a href="index.html">Home</a> / ERAS®</span>
+    <h1 class="h-xl load-in" style="--d:.08s">Enhanced Recovery After Surgery.</h1>
+    <p class="lede load-in" style="--d:.16s">An evidence-based, protocol-driven, multimodal improvement in care for patients having surgery. It guides every professional involved, so the whole team works as one.</p>
+  </div>
+</section>
+
+<!-- EXPLORER -->
+<section class="sec sec-navy on-dark">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">The patient pathway</span><h2 class="h-lg">Follow a patient through ERAS®.</h2><p class="lede">Choose a stage, or press play to watch the journey.</p></div>
+    <div class="explorer reveal">
+      <div class="track" role="tablist" aria-label="Stages of the ERAS pathway">
+        <span class="fill"></span>
+        <button class="stop" role="tab" aria-selected="true" aria-controls="p0" id="t0"><span class="n">1</span><span class="lbl">Before</span></button>
+        <button class="stop" role="tab" aria-selected="false" aria-controls="p1" id="t1" tabindex="-1"><span class="n">2</span><span class="lbl">In theatre</span></button>
+        <button class="stop" role="tab" aria-selected="false" aria-controls="p2" id="t2" tabindex="-1"><span class="n">3</span><span class="lbl">After</span></button>
+        <button class="stop" role="tab" aria-selected="false" aria-controls="p3" id="t3" tabindex="-1"><span class="n">4</span><span class="lbl">Home &amp; audit</span></button>
+      </div>
+      <div class="panel on" role="tabpanel" id="p0" aria-labelledby="t0">
+        <div><h3>Prepare the patient</h3><p>Recovery starts weeks before the operation. A prepared, informed patient copes better with surgery and becomes a partner in their own care.</p></div>
+        <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5 9-10"/></svg><span>Education and expectations<small>What will happen, and the patient's role in recovery</small></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5 9-10"/></svg><span>Optimise health<small>Nutrition, anaemia, smoking, alcohol, fitness</small></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5 9-10"/></svg><span>Shorter fasting<small>Clear fluids and a carbohydrate drink before surgery</small></span></li></ul>
+      </div>
+      <div class="panel" role="tabpanel" id="p1" aria-labelledby="t1">
+        <div><h3>Protect the body</h3><p>In theatre, the team limits the stress response to surgery: less trauma, stable physiology, good pain control with fewer opioids.</p></div>
+        <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5 9-10"/></svg><span>Minimally invasive surgery<small>Where appropriate for the procedure</small></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5 9-10"/></svg><span>Tailored anaesthesia and fluids<small>Avoid both too much and too little</small></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5 9-10"/></svg><span>Warmth and nausea prevention<small>Keep the patient warm; prevent sickness</small></span></li></ul>
+      </div>
+      <div class="panel" role="tabpanel" id="p2" aria-labelledby="t2">
+        <div><h3>Restore function</h3><p>The sooner the body returns to normal routines, the sooner it recovers. The whole ward team supports early activity.</p></div>
+        <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5 9-10"/></svg><span>Early eating and drinking<small>Usually on the day of surgery</small></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5 9-10"/></svg><span>Early mobilisation<small>Out of bed on the same or next day</small></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5 9-10"/></svg><span>Lines out early<small>Drips, drains and catheters removed promptly</small></span></li></ul>
+      </div>
+      <div class="panel" role="tabpanel" id="p3" aria-labelledby="t3">
+        <div><h3>Go home, then measure</h3><p>Patients leave when they meet clear discharge criteria, with a plan and a contact. The team audits each case to keep improving.</p></div>
+        <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5 9-10"/></svg><span>Clear discharge criteria<small>Eating, walking, pain controlled, safe at home</small></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5 9-10"/></svg><span>Follow-up<small>A named contact if problems arise</small></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5 9-10"/></svg><span>Audit compliance and outcomes<small>The more elements delivered, the better the results</small></span></li></ul>
+      </div>
+      <div class="explorer-foot"><button class="play" id="play" aria-pressed="false">▶ Play the journey</button><span class="note">General summary. Protocols vary by specialty; follow the published guidelines.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="sec">
+  <div class="wrap split" style="align-items:start">
+    <div class="sec-head reveal"><span class="kicker">Why it matters</span><h2 class="h-lg">Better for patients, better for hospitals.</h2><p class="lede">ERAS® substantially improves the quality of perioperative care while reducing cost. The goals are achieved by reducing the neuroendocrine stress response to surgery.</p></div>
+    <div class="grid g2 stagger">
+      <div class="card"><h3>Shorter hospital stay</h3><p>Patients meet discharge criteria sooner.</p></div>
+      <div class="card"><h3>Fewer complications</h3><p>Both surgical and medical.</p></div>
+      <div class="card"><h3>Fewer readmissions</h3><p>Recovery that holds after discharge.</p></div>
+      <div class="card"><h3>More satisfied patients</h3><p>Patients become partners in their care.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ERACS -->
+<section class="sec sec-sand" id="eracs">
+  <div class="wrap">
+    <div class="eracs reveal">
+      <div class="photo"><img src="img/events/muscat-2019/1.jpg" alt="Audience at the 3rd Middle East ERAS Conference in Muscat, 2019" loading="lazy"></div>
+      <div class="txt">
+        <span class="kicker">Spotlight</span>
+        <h2 class="h-lg" style="font-size:clamp(26px,3vw,36px)">Enhanced Recovery After Caesarean Section (ERACS)</h2>
+        <p style="color:var(--muted)">The Society has played a leading role in establishing evidence-based protocols for ERACS. In February 2019, the 3rd Middle East ERAS Conference with Oman's Ministry of Health launched Oman's enhanced recovery protocol after caesarean section.</p>
+        <p><a class="link-arrow" href="implement.html#guidelines">See the obstetric guidelines</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq">
+  <div class="wrap" style="max-width:900px">
+    <div class="sec-head reveal"><span class="kicker">Questions</span><h2 class="h-lg">Frequently asked</h2></div>
+    <div class="faq stagger">
+      <details open><summary>Which surgeries are suitable for ERAS®?</summary><div class="a">Although ERAS was first described for colorectal surgery (“fast track surgery”), the improved outcomes quickly led to wide use in other major surgery, such as gynaecological, urological and orthopaedic operations. The Society's view is that ERAS benefits patients and institutions most when the applicable components are implemented for each type of surgery.</div></details>
+      <details><summary>What is the difference between ERAS® and day-case surgery?</summary><div class="a">Day-case (ambulatory) surgery means no overnight stay. ERAS is an evidence-based, multimodal, protocol-driven approach that improves the overall quality of care. Because ERAS shortens recovery, it may make more operations possible as day cases over time.</div></details>
+      <details><summary>Is implementing ERAS® “all or nothing”?</summary><div class="a">No. Every component has some benefit. But outcomes improve the more fully the protocol is followed, so teams are strongly encouraged to implement ERAS as a package. <a href="implement.html#support">Ask us about implementation</a>.</div></details>
+      <details><summary>Where can I find the official guidelines?</summary><div class="a">ERAS® Society guidelines are free on the ERAS® Society website. Some are published jointly with other societies, such as ESPEN. Our <a href="implement.html#guidelines">guidelines library</a> links to them by specialty.</div></details>
+      <details><summary>I'm a patient. Is ERAS® right for me?</summary><div class="a">Ask your surgical team whether your hospital follows an enhanced recovery pathway for your operation. A patient guide is planned for this site. This website does not give individual medical advice.</div></details>
+    </div>
+  </div>
+</section>
+
+</main>
+<script src="assets/site.js"></script>
+<script>
+(() => {
+  const stops = [...document.querySelectorAll('.stop')], panels = [...document.querySelectorAll('.panel')], track = document.querySelector('.track');
+  let cur = 0, timer = null;
+  const go = (i, focus) => {
+    cur = i;
+    stops.forEach((s, j) => { s.setAttribute('aria-selected', j === i); s.tabIndex = j === i ? 0 : -1; s.classList.toggle('done', j < i); });
+    panels.forEach((p, j) => p.classList.toggle('on', j === i));
+    track.style.setProperty('--p', i / (stops.length - 1));
+    if (focus) stops[i].focus();
+  };
+  stops.forEach((s, i) => s.addEventListener('click', () => { stop(); go(i); }));
+  track.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') { stop(); go((cur + 1) % stops.length, true); }
+    if (e.key === 'ArrowLeft') { stop(); go((cur - 1 + stops.length) % stops.length, true); }
+  });
+  const btn = document.getElementById('play');
+  const stop = () => { clearInterval(timer); timer = null; btn.textContent = '▶ Play the journey'; btn.setAttribute('aria-pressed', false); };
+  btn.addEventListener('click', () => {
+    if (timer) return stop();
+    go(0); btn.textContent = '❚❚ Pause'; btn.setAttribute('aria-pressed', true);
+    timer = setInterval(() => cur < stops.length - 1 ? go(cur + 1) : stop(), 3200);
+  });
+})();
+</script>
+</body>
+</html>
