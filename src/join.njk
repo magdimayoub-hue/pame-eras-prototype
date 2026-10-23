@@ -1,16 +1,11 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
-<title>Register your interest · PAME ERAS Society</title>
-<meta name="description" content="Register your interest in PAME ERAS: hear about events, guidelines and membership as it opens.">
-<link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/site.css">
-<style>
+---
+title: "Register your interest · PAME ERAS Society"
+description: "Register your interest in PAME ERAS: hear about events, guidelines and membership as it opens."
+pageKey: join
+permalink: join.html
+---
+{% extends "base.njk" %}
+{% block head %}<style>
 .join{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,5vw,64px);align-items:start}
 @media (max-width:900px){.join{grid-template-columns:1fr}}
 .join>*{min-width:0}
@@ -29,9 +24,8 @@
 .roles-pick input:focus-visible+label{outline:3px solid var(--saffron);outline-offset:2px}
 .progress{height:6px;border-radius:6px;background:var(--sand-2);overflow:hidden;margin-bottom:22px}
 .progress i{display:block;height:100%;width:var(--p,0%);background:linear-gradient(90deg,var(--teal),var(--teal-2));transition:width .4s var(--ease)}
-</style>
-</head>
-<body data-page="join">
+</style>{% endblock %}
+{% block main %}
 <main id="main">
 
 <section class="sec sec-navy on-dark" style="padding-top:clamp(48px,7vw,90px)" data-trace>
@@ -79,6 +73,8 @@
 </section>
 
 </main>
+{% endblock %}
+{% block scripts %}
 <script src="assets/site.js"></script>
 <script>
 (() => {
@@ -87,5 +83,4 @@
   f.addEventListener('input', upd); f.addEventListener('change', upd);
 })();
 </script>
-</body>
-</html>
+{% endblock %}

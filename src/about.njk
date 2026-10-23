@@ -1,16 +1,11 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
-<title>About · PAME ERAS Society</title>
-<meta name="description" content="Who we are: an independent regional society promoting enhanced recovery after surgery across Africa and the Middle East since 2015.">
-<link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/site.css">
-<style>
+---
+title: "About · PAME ERAS Society"
+description: "Who we are: an independent regional society promoting enhanced recovery after surgery across Africa and the Middle East since 2015."
+pageKey: about
+permalink: about.html
+---
+{% extends "base.njk" %}
+{% block head %}<style>
 .letter{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:clamp(26px,5vw,56px);box-shadow:var(--shadow);position:relative;overflow:hidden}
 .letter::before{content:"“";position:absolute;right:28px;top:-30px;font:800 220px/1 var(--f-display);color:var(--teal-soft)}
 .letter p{font-size:clamp(17px,1.5vw,19px);line-height:1.75;color:var(--ink);max-width:66ch;position:relative}
@@ -41,9 +36,8 @@
 .story-item .yr{font:800 34px/1 var(--f-display);color:var(--navy)}
 .story-item h3{font-size:20px;margin:6px 0 6px}
 .story-item p{color:var(--muted);max-width:60ch}
-</style>
-</head>
-<body data-page="about">
+</style>{% endblock %}
+{% block main %}
 <main id="main">
 
 <section class="page-hero on-dark" data-trace>
@@ -146,6 +140,8 @@
 </section>
 
 </main>
+{% endblock %}
+{% block scripts %}
 <script src="assets/site.js"></script>
 <script>
 (() => {
@@ -160,5 +156,4 @@
   addEventListener('scroll', update, {passive: true}); update();
 })();
 </script>
-</body>
-</html>
+{% endblock %}

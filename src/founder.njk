@@ -1,16 +1,11 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
-<title>Prof. Medhat Shalabi · Founder &amp; President · PAME ERAS Society</title>
-<meta name="description" content="Prof. Medhat Shalabi, consultant anaesthetist, ERAS implementation expert and founder of PAME ERAS.">
-<link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/site.css">
-<style>
+---
+title: "Prof. Medhat Shalabi · Founder & President · PAME ERAS Society"
+description: "Prof. Medhat Shalabi, consultant anaesthetist, ERAS implementation expert and founder of PAME ERAS."
+pageKey: founder
+permalink: founder.html
+---
+{% extends "base.njk" %}
+{% block head %}<style>
 .f-hero{position:relative;background:var(--navy);color:var(--on-navy);overflow:hidden}
 .f-hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,4vw,56px);align-items:end;padding-top:clamp(48px,7vw,80px)}
 .f-hero h1{color:#fff}
@@ -37,9 +32,8 @@
 .societies span:hover{border-color:var(--teal);transform:translateY(-2px)}
 .talk{display:grid;gap:6px}
 .talk .mono{color:var(--teal)}
-</style>
-</head>
-<body data-page="founder">
+</style>{% endblock %}
+{% block main %}
 <main id="main">
 
 <section class="f-hero on-dark">
@@ -115,6 +109,7 @@
 </section>
 
 </main>
+{% endblock %}
+{% block scripts %}
 <script src="assets/site.js"></script>
-</body>
-</html>
+{% endblock %}

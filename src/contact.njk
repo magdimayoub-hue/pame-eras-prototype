@@ -1,16 +1,11 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
-<title>Contact · PAME ERAS Society</title>
-<meta name="description" content="Contact PAME ERAS: general enquiries, implementation support, speakers and partnerships. Partners, sponsorship and privacy policies.">
-<link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/site.css">
-<style>
+---
+title: "Contact · PAME ERAS Society"
+description: "Contact PAME ERAS: general enquiries, implementation support, speakers and partnerships. Partners, sponsorship and privacy policies."
+pageKey: contact
+permalink: contact.html
+---
+{% extends "base.njk" %}
+{% block head %}<style>
 .form-wrap{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:clamp(22px,4vw,44px);box-shadow:var(--shadow)}
 .contact-list{display:grid;gap:12px}
 .ci{display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
@@ -31,9 +26,8 @@
 .policy details[open] summary::after{transform:rotate(45deg)}
 .policy .a{padding:0 22px 20px;color:var(--muted)}
 .policy .a ul{margin:8px 0 0;padding-left:18px;display:grid;gap:6px}
-</style>
-</head>
-<body data-page="contact">
+</style>{% endblock %}
+{% block main %}
 <main id="main">
 
 <section class="page-hero on-dark" data-trace>
@@ -97,6 +91,8 @@
 </section>
 
 </main>
+{% endblock %}
+{% block scripts %}
 <script src="assets/site.js"></script>
 <script>
 (() => {
@@ -106,5 +102,4 @@
   if (d && d.tagName === 'DETAILS') d.open = true;
 })();
 </script>
-</body>
-</html>
+{% endblock %}

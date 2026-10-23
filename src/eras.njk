@@ -1,16 +1,11 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
-<title>What is ERAS® · PAME ERAS Society</title>
-<meta name="description" content="Enhanced Recovery After Surgery explained: the patient pathway, benefits, ERACS and frequently asked questions.">
-<link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/site.css">
-<style>
+---
+title: "What is ERAS® · PAME ERAS Society"
+description: "Enhanced Recovery After Surgery explained: the patient pathway, benefits, ERACS and frequently asked questions."
+pageKey: eras
+permalink: eras.html
+---
+{% extends "base.njk" %}
+{% block head %}<style>
 /* pathway explorer */
 .explorer{background:var(--navy-2);border-radius:24px;padding:clamp(20px,3vw,36px);border:1px solid rgba(255,255,255,.08)}
 .track{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:28px}
@@ -51,9 +46,8 @@
 .eracs .photo{border-radius:0;min-height:320px}
 .eracs .txt{padding:clamp(24px,4vw,48px);display:grid;gap:14px;align-content:center}
 @media (max-width:820px){.eracs{grid-template-columns:1fr}}
-</style>
-</head>
-<body data-page="eras">
+</style>{% endblock %}
+{% block main %}
 <main id="main">
 
 <section class="page-hero on-dark" data-trace>
@@ -140,6 +134,8 @@
 </section>
 
 </main>
+{% endblock %}
+{% block scripts %}
 <script src="assets/site.js"></script>
 <script>
 (() => {
@@ -166,5 +162,4 @@
   });
 })();
 </script>
-</body>
-</html>
+{% endblock %}

@@ -1,0 +1,47 @@
+{
+  "name": "Pan African & Middle East ERAS Society",
+  "shortName": "PAME ERAS Society",
+  "prototype": true,
+  "prototypeNotice": "Prototype for review · content marked “to confirm” needs checking · not the live site",
+  "robots": "noindex,nofollow",
+  "nav": [
+    {"key": "about", "label": "About", "href": "about.html"},
+    {"key": "eras", "label": "ERAS®", "href": "eras.html"},
+    {"key": "implement", "label": "Implement", "href": "implement.html"},
+    {"key": "events", "label": "Events", "href": "events.html"},
+    {"key": "education", "label": "Education", "href": "education.html"},
+    {"key": "founder", "label": "Founder", "href": "founder.html"},
+    {"key": "contact", "label": "Contact", "href": "contact.html"}
+  ],
+  "cta": {"href": "join.html", "label": "Register your interest", "shortLabel": "Register interest"},
+  "footer": {
+    "blurb": "The Pan African & Middle East ERAS Society helps hospital teams put enhanced recovery after surgery into practice, since 2015.",
+    "columns": [
+      {"title": "Society", "links": [
+        {"label": "About us", "href": "about.html"},
+        {"label": "Board", "href": "about.html#board"},
+        {"label": "Governance", "href": "about.html#governance"},
+        {"label": "Our founder", "href": "founder.html"}
+      ]},
+      {"title": "Practice", "links": [
+        {"label": "What is ERAS®", "href": "eras.html"},
+        {"label": "Implement ERAS®", "href": "implement.html"},
+        {"label": "Guidelines", "href": "implement.html#guidelines"},
+        {"label": "Education", "href": "education.html"}
+      ]},
+      {"title": "Get involved", "links": [
+        {"label": "Events", "href": "events.html"},
+        {"label": "Register interest", "href": "join.html"},
+        {"label": "Contact", "href": "contact.html"},
+        {"label": "Partners", "href": "contact.html#partners"}
+      ]}
+    ],
+    "copyright": "© 2026 Pan African & Middle East ERAS Society",
+    "legal": [
+      {"label": "Privacy", "href": "contact.html#privacy"},
+      {"label": "Terms", "href": "contact.html#privacy"},
+      {"label": "Sponsorship policy", "href": "contact.html#sponsorship"}
+    ],
+    "notice": "ERAS® is a registered trademark of the ERAS® Society. PAME ERAS is an independent society and is not affiliated with or endorsed by the ERAS® Society. Clinical content is for healthcare professionals and is not individual medical advice."
+  }
+}

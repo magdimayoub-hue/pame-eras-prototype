@@ -1,39 +1,11 @@
-// PAME ERAS prototype · shared header, footer and interactions.
+// PAME ERAS · shared interactions (menu, reveals, counters, gallery, forms).
 (() => {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const page = document.body.dataset.page || '';
   const arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
   window.PAME_ARROW = arrow;
 
-  const NAV = [
-    ['about', 'About', 'about.html'],
-    ['eras', 'ERAS®', 'eras.html'],
-    ['implement', 'Implement', 'implement.html'],
-    ['events', 'Events', 'events.html'],
-    ['education', 'Education', 'education.html'],
-    ['founder', 'Founder', 'founder.html'],
-    ['contact', 'Contact', 'contact.html']
-  ];
-
-  // ---------- header ----------
-  const head = document.createElement('header');
-  head.className = 'site-head';
-  head.innerHTML = `
-    <div class="wrap">
-      <a class="brand-link" href="index.html" aria-label="PAME ERAS Society home"><img src="assets/brand/pame-eras-logo.svg" alt="PAME ERAS Society" width="148" height="40"></a>
-      <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span></button>
-      <nav class="nav" id="nav" aria-label="Main">
-        ${NAV.map(([k, label, href]) => `<a href="${href}"${k === page ? ' aria-current="page"' : ''}>${label}</a>`).join('')}
-        <a class="btn btn-pri nav-cta" href="join.html">Register your interest</a>
-      </nav>
-      <a class="btn btn-pri head-cta" href="join.html">Register interest</a>
-    </div>`;
-  const bar = document.createElement('div');
-  bar.className = 'proto-bar';
-  bar.innerHTML = 'Prototype for review · content marked “to confirm” needs checking · not the live site';
-  const skip = document.createElement('a');
-  skip.className = 'skip'; skip.href = '#main'; skip.textContent = 'Skip to content';
-  document.body.prepend(skip, bar, head);
+  // header and footer are written into each page by the Eleventy layout
+  const head = document.querySelector('.site-head');
 
   const menuBtn = head.querySelector('.menu-btn');
   menuBtn.addEventListener('click', () => {
@@ -45,32 +17,6 @@
   addEventListener('keydown', e => { if (e.key === 'Escape' && document.body.classList.contains('menu-open')) menuBtn.click(); });
   const onScroll = () => head.classList.toggle('scrolled', scrollY > 8);
   addEventListener('scroll', onScroll, {passive: true}); onScroll();
-
-  // ---------- footer ----------
-  const foot = document.createElement('footer');
-  foot.className = 'site-foot on-dark';
-  foot.innerHTML = `
-    <div class="wrap">
-      <div class="foot-grid">
-        <div>
-          <img src="assets/brand/pame-eras-logo-reverse.svg" alt="PAME ERAS Society" width="170" height="46">
-          <p style="max-width:40ch">The Pan African &amp; Middle East ERAS Society helps hospital teams put enhanced recovery after surgery into practice, since 2015.</p>
-          <form class="foot-news" onsubmit="event.preventDefault();this.innerHTML='<p style=&quot;color:#3FB8AF&quot;>Thank you. Please confirm from your inbox.</p>'">
-            <label class="sr" for="fn">Email for newsletter</label>
-            <input id="fn" type="email" placeholder="Email for our newsletter" required>
-            <button class="btn btn-pri" type="submit">Subscribe</button>
-          </form>
-        </div>
-        <div><h4>Society</h4><ul><li><a href="about.html">About us</a></li><li><a href="about.html#board">Board</a></li><li><a href="about.html#governance">Governance</a></li><li><a href="founder.html">Our founder</a></li></ul></div>
-        <div><h4>Practice</h4><ul><li><a href="eras.html">What is ERAS®</a></li><li><a href="implement.html">Implement ERAS®</a></li><li><a href="implement.html#guidelines">Guidelines</a></li><li><a href="education.html">Education</a></li></ul></div>
-        <div><h4>Get involved</h4><ul><li><a href="events.html">Events</a></li><li><a href="join.html">Register interest</a></li><li><a href="contact.html">Contact</a></li><li><a href="contact.html#partners">Partners</a></li></ul></div>
-      </div>
-      <div class="foot-legal">
-        <div class="row"><span>© 2026 Pan African &amp; Middle East ERAS Society</span><span><a href="contact.html#privacy">Privacy</a> · <a href="contact.html#privacy">Terms</a> · <a href="contact.html#sponsorship">Sponsorship policy</a></span></div>
-        <span>ERAS® is a registered trademark of the ERAS® Society. PAME ERAS is an independent society and is not affiliated with or endorsed by the ERAS® Society. Clinical content is for healthcare professionals and is not individual medical advice.</span>
-      </div>
-    </div>`;
-  document.body.append(foot);
 
   // ---------- hero trace (any element with .hero-trace-slot) ----------
   document.querySelectorAll('[data-trace]').forEach(el => {
