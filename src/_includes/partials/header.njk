@@ -1,0 +1,13 @@
+<a class="skip" href="#main">Skip to content</a>
+{% if site.prototype %}<div class="proto-bar">{{ site.prototypeNotice }}</div>{% endif %}
+<header class="site-head">
+    <div class="wrap">
+      <a class="brand-link" href="index.html" aria-label="{{ site.shortName }} home"><img src="assets/brand/pame-eras-logo.svg" alt="{{ site.shortName }}" width="148" height="40"></a>
+      <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span></button>
+      <nav class="nav" id="nav" aria-label="Main">
+        {% for item in site.nav %}<a href="{{ item.href }}"{% if item.key == pageKey %} aria-current="page"{% endif %}>{{ item.label }}</a>{% endfor %}
+        <a class="btn btn-pri nav-cta" href="{{ site.cta.href }}">{{ site.cta.label }}</a>
+      </nav>
+      <a class="btn btn-pri head-cta" href="{{ site.cta.href }}">{{ site.cta.shortLabel }}</a>
+    </div>
+</header>

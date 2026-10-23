@@ -1,0 +1,17 @@
+{
+  "name": "pame-eras-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website of the Pan African & Middle East ERAS Society, built with Eleventy",
+  "type": "module",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve --port 8080"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.7"
+  }
+}

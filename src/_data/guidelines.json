@@ -1,0 +1,70 @@
+{
+  "categories": {
+    "gi": "GI & colorectal",
+    "obs": "Obstetrics & gynaecology",
+    "ortho": "Orthopaedics",
+    "other": "Other specialties"
+  },
+  "items": [
+    {
+      "cat": "gi",
+      "title": "Elective colorectal surgery"
+    },
+    {
+      "cat": "gi",
+      "title": "Bariatric surgery"
+    },
+    {
+      "cat": "gi",
+      "title": "Pancreaticoduodenectomy"
+    },
+    {
+      "cat": "gi",
+      "title": "Liver surgery"
+    },
+    {
+      "cat": "gi",
+      "title": "Gastrectomy"
+    },
+    {
+      "cat": "gi",
+      "title": "Oesophagectomy"
+    },
+    {
+      "cat": "obs",
+      "title": "Caesarean section (ERACS)"
+    },
+    {
+      "cat": "obs",
+      "title": "Gynaecologic / oncology surgery"
+    },
+    {
+      "cat": "ortho",
+      "title": "Hip and knee replacement"
+    },
+    {
+      "cat": "ortho",
+      "title": "Lumbar spinal fusion"
+    },
+    {
+      "cat": "other",
+      "title": "Cardiac surgery"
+    },
+    {
+      "cat": "other",
+      "title": "Lung surgery"
+    },
+    {
+      "cat": "other",
+      "title": "Cystectomy"
+    },
+    {
+      "cat": "other",
+      "title": "Head and neck surgery"
+    },
+    {
+      "cat": "other",
+      "title": "Breast reconstruction"
+    }
+  ]
+}

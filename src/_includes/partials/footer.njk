@@ -1,0 +1,21 @@
+<footer class="site-foot on-dark">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <img src="assets/brand/pame-eras-logo-reverse.svg" alt="{{ site.shortName }}" width="170" height="46">
+          <p style="max-width:40ch">{{ site.footer.blurb }}</p>
+          <form class="foot-news" onsubmit="event.preventDefault();this.innerHTML='<p style=&quot;color:#3FB8AF&quot;>Thank you. Please confirm from your inbox.</p>'">
+            <label class="sr" for="fn">Email for newsletter</label>
+            <input id="fn" type="email" placeholder="Email for our newsletter" required>
+            <button class="btn btn-pri" type="submit">Subscribe</button>
+          </form>
+        </div>
+        {% for col in site.footer.columns %}<div><h4>{{ col.title }}</h4><ul>{% for link in col.links %}<li><a href="{{ link.href }}">{{ link.label }}</a></li>{% endfor %}</ul></div>
+        {% endfor %}
+      </div>
+      <div class="foot-legal">
+        <div class="row"><span>{{ site.footer.copyright }}</span><span>{% for link in site.footer.legal %}<a href="{{ link.href }}">{{ link.label }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</span></div>
+        <span>{{ site.footer.notice }}</span>
+      </div>
+    </div>
+</footer>

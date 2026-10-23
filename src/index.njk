@@ -1,17 +1,11 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
-<title>PAME ERAS Society · Better recovery after surgery</title>
-<meta name="description" content="The Pan African & Middle East ERAS Society helps hospital teams put enhanced recovery after surgery into practice.">
-<link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/site.css">
-<style>
+---
+title: "PAME ERAS Society · Better recovery after surgery"
+description: "The Pan African & Middle East ERAS Society helps hospital teams put enhanced recovery after surgery into practice."
+pageKey: home
+permalink: index.html
+---
+{% extends "base.njk" %}
+{% block head %}<style>
 /* hero */
 .home-hero{position:relative;background:var(--navy);color:var(--on-navy);overflow:hidden;padding:clamp(56px,8vw,96px) 0 250px}
 .home-hero::before{content:"";position:absolute;inset:-20% -10% auto auto;width:70vw;height:70vw;max-width:900px;max-height:900px;background:radial-gradient(circle,rgba(63,184,175,.18),transparent 62%);pointer-events:none}
@@ -104,9 +98,8 @@
 .cta-band p{color:#D8F1EE;margin-top:10px;max-width:52ch}
 .cta-band svg.bg{position:absolute;right:-40px;top:-30px;width:320px;opacity:.12}
 @media (max-width:760px){.cta-band{grid-template-columns:1fr}}
-</style>
-</head>
-<body data-page="home">
+</style>{% endblock %}
+{% block main %}
 <main id="main">
 
 <!-- HERO -->
@@ -253,6 +246,8 @@
 </section>
 
 </main>
+{% endblock %}
+{% block scripts %}
 <script src="assets/data.js"></script>
 <script src="assets/map.js"></script>
 <script src="assets/site.js"></script>
@@ -293,5 +288,4 @@
   document.querySelectorAll('.rail-ctl button').forEach(b => b.addEventListener('click', () => rail.scrollBy({left: +b.dataset.dir * rail.clientWidth * .8, behavior: 'smooth'})));
 })();
 </script>
-</body>
-</html>
+{% endblock %}
